@@ -417,3 +417,39 @@ footer {
   border: 0;
   border-radius: 8px;
 }
+
+
+.sigle-wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.sigle-wrapper img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Spațiu între imagini și text în secțiunea .camera */
+.camera .galerie {
+  margin-bottom: 20px;
+}
+
+/* Spațiu între camere (carduri) */
+.camera {
+  margin-bottom: 40px;
+}
+
+/* Optional – mai mult spațiu pe mobil */
+@media (max-width: 768px) {
+  .camera {
+    margin-bottom: 60px;
+  }
+
+  .camera .galerie {
+    margin-bottom: 24px;
+  }
+}
