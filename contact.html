@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Casa Ivana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav>
+    <div class="logo"><a href="index.html">Casa Ivana</a></div>
+    <ul>
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="facilitati.html">Facilități</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner contact -->
+  <header class="contact-header" data-aos="fade-in">
+    <img src="poze/fundal1.jpg" alt="Contact Casa Ivana" class="header-bg" />
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Contactează-ne</h1>
+      <p>Suntem bucuroși să răspundem oricărei întrebări!</p>
+    </div>
+  </header>
+
+<section class="contact-section" data-aos="fade-up">
+  <h2>Trimite-ne un mesaj</h2>
+
+  <!-- Informații de contact -->
+  <div class="contact-info">
+    <p><strong>Telefon:</strong> <a href="tel:0740177838">0740 177 838</a></p>
+    <p><strong>Email:</strong> <a href="mailto:office@casivana.ro">office@casivana.ro</a></p>
+    <p><strong>Adresă:</strong> Strada Razelm 19, Jurilovca, Tulcea</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Formular -->
+    <form
+      action="https://formspree.io/f/myzwaado"
+      method="POST"
+      class="form-contact"
+    >
+      <label for="nume">Nume:</label>
+      <input type="text" id="nume" name="nume" required />
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" name="telefon" required />
+
+      <label for="mesaj">Mesaj:</label>
+      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+      <button type="submit" class="btn-rezerva">Trimite mesajul</button>
+    </form>
+
+    <!-- Hartă -->
+    <div class="harta-contact">
+  <iframe
+    src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
+  </div>
+</section>
+
+  <section class="sigle-europene" data-aos="fade-up">
+    <div class="sigle-wrapper">
+      <img src="poze/baner.jpg" alt="Sigle AFIR, PNDR, Guvern" />
+    </div>
+  </section>
+
+
+  <footer>
+    &copy; 2025 Casa Ivana. Cu drag din Dobrogea.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+
+
+<script>
+  let lastScroll = 0;
+  const nav = document.querySelector("nav");
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+      nav.style.transform = "translateY(0)";
+      return;
+    }
+
+    if (currentScroll > lastScroll) {
+      // Scroll în jos → ascunde nav-ul
+      nav.style.transform = "translateY(-100%)";
+    } else {
+      // Scroll în sus → arată nav-ul
+      nav.style.transform = "translateY(0)";
+    }
+
+    lastScroll = currentScroll;
+  });
+</script>
+
+
+</body>
+</html>

@@ -3,53 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Casa Ivana – O casă cu suflet în Jurilovca</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <title>Casa Ivana – Cazare tradițională în Jurilovca</title>
+  <meta name="description" content="Casa Ivana este o casă tradițională disponibilă pentru cazare în Jurilovca, aproape de portul turistic. Liniște, confort, povești și tradiție.">
+  <meta name="keywords" content="cazare Jurilovca, casa Ivana, pensiune Dobrogea, Gura Portiței, Delta Dunării">
+  <meta name="author" content="Casa Ivana">
+  <meta property="og:title" content="Casa Ivana – Cazare în Jurilovca" />
+  <meta property="og:description" content="Tradiție, liniște și ospitalitate în inima Dobrogei. Casa Ivana vă așteaptă." />
+  <meta property="og:image" content="https://exemplu.ro/poze/preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://casaivana.vercel.app" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
-
-
-
 
 <body>
 
   <nav>
-    <div class="logo">Casa Ivana</div>
+    <div class="logo"><a href="index.html">Casa Ivana</a></div>
     <ul>
-      <li><a href="#povestea">Povestea</a></li>
+      <li><a href="index.html">Acasă</a></li>
       <li><a href="facilitati.html">Facilități</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-<header>
-  <img src="poze/fundal1.jpg" alt="Casa Ivana" class="header-bg" />
-  <div class="overlay"></div>
-  <div class="hero-text">
-    <h1>Bine ați venit la Casa Ivana</h1>
-    <p>O casă de la țară, cu suflet, tradiție și liniște.</p>
-  </div>
-</header>
+  <header class="facilitati-header" data-aos="fade-in">
 
+    <img src="poze/fundal1.jpg" alt="Casa Ivana" class="header-bg" />
+    <div class="overlay"></div>
+    <div class="hero-text" id="scrollText">
+      <h1>Bine ați venit la Casa Ivana</h1>
+      <p>O casă de la țară, cu suflet, tradiție și liniște.</p>
+    </div>
+  </header>
 
-  <section id="povestea">
+  <section id="povestea" data-aos="fade-up">
     <h2>Povestea noastră</h2>
-
     <div class="povestea-wrapper">
-      <div class="povestea-text">
+      <div class="povestea-text" data-aos="fade-right">
         <p>Casa Ivana, casa noastră de la țară, unde vă așteptăm cu bucurie să ne fiți oaspeți, este un loc unde am pus mult suflet și energie.</p>
         <p>Toate trăirile și amintirile din copilăria petrecută la bunici și-au pus amprenta în amenajarea acestei căsuțe.</p>
         <p>Am recondiționat și reutilizat cât am putut din mobilierul vechi și am scos la lumină țesături uitate de timp, toate adunate într-o atmosferă plină de culoare și emoție.</p>
         <p>Vă așteptăm cu drag în casa noastră, un loc în care fiecare colțișor vă va spune o poveste!</p>
         <p>Fie că veniți în căutarea liniștii, a unei evadări din agitația orașului sau a unei experiențe autentice de sat dobrogean, Casa Ivana vă oferă cadrul perfect pentru amintiri frumoase, tihnite și sincere.</p>
       </div>
-      <div class="povestea-imgs">
+      <div class="povestea-imgs" data-aos="fade-left">
         <img src="poze/mama1.jpg" alt="Casa Ivana primăvara" />
       </div>
     </div>
   </section>
 
-  <section id="facilitati">
+  <section id="facilitati" data-aos="zoom-in">
     <h2>Facilități</h2>
     <ul class="lista-facilitati">
       <li>🛏️ 3 dormitoare tradiționale</li>
@@ -61,16 +66,99 @@
     </ul>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Telefon:</strong> 0722 354 203</p>
-    <p><strong>Email:</strong> office@casivana.ro</p>
-    <p><strong>Adresă:</strong> Jurilovca, Tulcea</p>
+  <div class="rezerva-wrapper" data-aos="fade-up">
+    <a href="#contact" class="btn-rezerva">Rezervă acum</a>
+  </div>
+
+  <section id="atractii" class="atractii-stil" data-aos="fade-up">
+    <div class="atractii-wrapper">
+      <h2>Atracții din zona Jurilovca pe care le poți include în vacanța ta</h2>
+      <div class="atractii-grid-poze">
+        <div class="card-atractie" data-aos="zoom-in">
+          <img src="poze/gura-portitei.jpg" alt="Gura Portiței">
+          <p>Gura Portiței</p>
+        </div>
+        <div class="card-atractie" data-aos="zoom-in" data-aos-delay="100">
+          <img src="poze/plimbari-barca.jpg" alt="Plimbari Barca">
+          <p>Plimbari cu Barca</p>
+        </div>
+        <div class="card-atractie" data-aos="zoom-in" data-aos-delay="200">
+          <img src="poze/dolosman.jpg" alt="Capul Doloșman">
+          <p>Capul Doloșman</p>
+        </div>
+        <div class="card-atractie" data-aos="zoom-in" data-aos-delay="300">
+          <img src="poze/razelm.jpg" alt="Lacul Razelm">
+          <p>Lacul Razelm</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sigle-europene" data-aos="fade-up">
+    <div class="sigle-wrapper">
+      <img src="poze/baner.jpg" alt="Sigle AFIR, PNDR, Guvern" />
+    </div>
+  </section>
+
+  <section id="contact" data-aos="fade-up">
+    <h2><a href="contact.html">Contact</a></h2>
+<p><strong>Telefon:</strong> <a href="tel:0722354203">0722 354 203</a></p>
+<p><strong>Email:</strong> <a href="mailto:office@casivana.ro">office@casivana.ro</a></p>
+<p><strong>Adresă:</strong> <a href="contact.html">Strada Razelm 19, Jurilovca, Tulcea</a></p>
+
+
+    <!-- HARTA GOOGLE -->
+    <div style="margin-top: 30px;">
+      <iframe
+  src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed"
+  width="100%"
+  height="300"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Casa Ivana. Cu drag din Dobrogea.
   </footer>
+
+  <!-- Scroll inteligent navbar -->
+  <script>
+    let lastScroll = 0;
+    const nav = document.getElementById("mainNav");
+
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll <= 0) {
+        nav.style.transform = "translateY(0)";
+        return;
+      }
+
+      if (currentScroll > lastScroll) {
+        // scroll down
+        nav.style.transform = "translateY(-100%)";
+      } else {
+        // scroll up
+        nav.style.transform = "translateY(0)";
+      }
+
+      lastScroll = currentScroll;
+    });
+  </script>
+
+  <!-- AOS init -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
 
 </body>
 </html>
