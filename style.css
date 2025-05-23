@@ -22,40 +22,67 @@ nav {
   top: 0;
   width: 100%;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
 }
 
-
-
-nav .logo {
-  font-size: 24px;
+.logo {
+  font-size: 22px;
   font-weight: bold;
+  color: #222;
+  text-decoration: none;
 }
 
-nav ul {
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li a {
+.nav-links li a {
   text-decoration: none;
   color: #222;
   font-weight: 500;
   transition: 0.3s;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
   color: #bb4e1e;
   border-bottom: 2px solid #bb4e1e;
 }
+
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links li a {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
+
 header {
   position: relative;
   height: 100vh;
@@ -453,5 +480,89 @@ h2 a {
   color: #222;
   font-size: 24px;
   font-weight: bold;
+}
+
+/* NAVBAR GENERAL */
+.navbar {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+  text-decoration: none;
+}
+
+/* MENIU DESKTOP */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #007b5e;
+}
+
+/* BUTON HAMBURGER */
+.menu-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 1.5rem;
+    background-color: #fff;
+    flex-direction: column;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-bottom: 0.8rem;
+  }
+
+  .nav-links li:last-child {
+    margin-bottom: 0;
+  }
 }
 

@@ -20,14 +20,18 @@
 
 <body>
 
-  <nav>
-    <div class="logo"><a href="index.html">Casa Ivana</a></div>
-    <ul>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">Casa Ivana</a>
+    <ul class="nav-links">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="facilitati.html">Facilități</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-  </nav>
+  </div>
+</nav>
+
+
 
   <header class="facilitati-header" data-aos="fade-in">
 
@@ -160,6 +164,15 @@
       once: true
     });
   </script>
+
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+</script>
+
+
 
 </body>
 </html>
