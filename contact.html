@@ -10,10 +10,11 @@
 </head>
 <body>
 
-<nav>
+<nav id="mainNav">
   <div class="nav-container">
     <a href="index.html" class="logo">Casa Ivana</a>
-    <ul class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="facilitati.html">Facilități</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -32,47 +33,40 @@
     </div>
   </header>
 
-<section class="contact-section" data-aos="fade-up">
+<section class="contact-section">
   <h2>Trimite-ne un mesaj</h2>
 
-  <!-- Informații de contact -->
   <div class="contact-info">
     <p><strong>Telefon:</strong> <a href="tel:0740177838">0740 177 838</a></p>
     <p><strong>Email:</strong> <a href="mailto:office@casivana.ro">office@casivana.ro</a></p>
     <p><strong>Adresă:</strong> Strada Razelm 19, Jurilovca, Tulcea</p>
   </div>
 
-  <div class="contact-grid">
+  <div class="contact-container">
     <!-- Formular -->
-    <form
-      action="https://formspree.io/f/myzwaado"
-      method="POST"
-      class="form-contact"
-    >
+    <form class="contact-form" action="https://formspree.io/f/myzwaado" method="POST">
       <label for="nume">Nume:</label>
-      <input type="text" id="nume" name="nume" required />
+      <input type="text" name="nume" id="nume" required />
 
       <label for="telefon">Telefon:</label>
-      <input type="tel" id="telefon" name="telefon" required />
+      <input type="text" name="telefon" id="telefon" required />
 
       <label for="mesaj">Mesaj:</label>
-      <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+      <textarea name="mesaj" id="mesaj" rows="5" required></textarea>
 
       <button type="submit" class="btn-rezerva">Trimite mesajul</button>
     </form>
 
-    <!-- Hartă -->
-    <div class="harta-contact">
-  <iframe
-    src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-
+    <!-- Harta -->
+    <div class="contact-map">
+      <iframe 
+        src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
   </div>
 </section>
+
 
   <section class="sigle-europene" data-aos="fade-up">
     <div class="sigle-wrapper">
@@ -118,6 +112,14 @@
     lastScroll = currentScroll;
   });
 </script>
+
+  <!-- SCRIPT MENIU MOBIL -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
 
 
 </body>

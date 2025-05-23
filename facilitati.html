@@ -10,10 +10,11 @@
 </head>
 <body>
 
-<nav>
+<nav id="mainNav">
   <div class="nav-container">
     <a href="index.html" class="logo">Casa Ivana</a>
-    <ul class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="facilitati.html">Facilități</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -150,6 +151,14 @@
     lastScroll = currentScroll;
   });
 </script>
+
+
+  <!-- SCRIPT MENIU MOBIL -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
 
 
 </body>
