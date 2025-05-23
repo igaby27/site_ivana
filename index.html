@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
   <title>Casa Ivana – Cazare tradițională în Jurilovca</title>
   <meta name="description" content="Casa Ivana este o casă tradițională disponibilă pentru cazare în Jurilovca, aproape de portul turistic. Liniște, confort, povești și tradiție.">
   <meta name="keywords" content="cazare Jurilovca, casa Ivana, pensiune Dobrogea, Gura Portiței, Delta Dunării">
@@ -15,15 +13,18 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://casaivana.vercel.app" />
   <meta name="google-site-verification" content="5rmdDjzyfZyRF1WwrkGJSyXize3a0Gmio8UqnDXGSq0" />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
+  <!-- NAVBAR RESPONSIVE -->
+<nav id="mainNav">
   <div class="nav-container">
     <a href="index.html" class="logo">Casa Ivana</a>
-    <ul class="nav-links">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Acasă</a></li>
       <li><a href="facilitati.html">Facilități</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -33,8 +34,8 @@
 
 
 
+  <!-- HEADER -->
   <header class="facilitati-header" data-aos="fade-in">
-
     <img src="poze/fundal1.jpg" alt="Casa Ivana" class="header-bg" />
     <div class="overlay"></div>
     <div class="hero-text" id="scrollText">
@@ -43,6 +44,7 @@
     </div>
   </header>
 
+  <!-- POVESTEA -->
   <section id="povestea" data-aos="fade-up">
     <h2>Povestea noastră</h2>
     <div class="povestea-wrapper">
@@ -59,6 +61,7 @@
     </div>
   </section>
 
+  <!-- FACILITATI -->
   <section id="facilitati" data-aos="zoom-in">
     <h2>Facilități</h2>
     <ul class="lista-facilitati">
@@ -71,10 +74,12 @@
     </ul>
   </section>
 
+  <!-- REZERVARE -->
   <div class="rezerva-wrapper" data-aos="fade-up">
     <a href="#contact" class="btn-rezerva">Rezervă acum</a>
   </div>
 
+  <!-- ATRACTII -->
   <section id="atractii" class="atractii-stil" data-aos="fade-up">
     <div class="atractii-wrapper">
       <h2>Atracții din zona Jurilovca pe care le poți include în vacanța ta</h2>
@@ -84,8 +89,8 @@
           <p>Gura Portiței</p>
         </div>
         <div class="card-atractie" data-aos="zoom-in" data-aos-delay="100">
-          <img src="poze/plimbari-barca.jpg" alt="Plimbari Barca">
-          <p>Plimbari cu Barca</p>
+          <img src="poze/plimbari-barca.jpg" alt="Plimbări cu barca">
+          <p>Plimbări cu barca</p>
         </div>
         <div class="card-atractie" data-aos="zoom-in" data-aos-delay="200">
           <img src="poze/dolosman.jpg" alt="Capul Doloșman">
@@ -99,63 +104,61 @@
     </div>
   </section>
 
+  <!-- BANNER FINANTARE -->
   <section class="sigle-europene" data-aos="fade-up">
     <div class="sigle-wrapper">
       <img src="poze/baner.jpg" alt="Sigle AFIR, PNDR, Guvern" />
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" data-aos="fade-up">
     <h2><a href="contact.html">Contact</a></h2>
-<p><strong>Telefon:</strong> <a href="tel:0722354203">0722 354 203</a></p>
-<p><strong>Email:</strong> <a href="mailto:office@casivana.ro">office@casivana.ro</a></p>
-<p><strong>Adresă:</strong> <a href="contact.html">Strada Razelm 19, Jurilovca, Tulcea</a></p>
+    <p><strong>Telefon:</strong> <a href="tel:0722354203">0722 354 203</a></p>
+    <p><strong>Email:</strong> <a href="mailto:office@casivana.ro">office@casivana.ro</a></p>
+    <p><strong>Adresă:</strong> <a href="contact.html">Strada Razelm 19, Jurilovca, Tulcea</a></p>
 
-
-    <!-- HARTA GOOGLE -->
     <div style="margin-top: 30px;">
       <iframe
-  src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed"
-  width="100%"
-  height="300"
-  style="border:0;"
-  allowfullscreen=""
-  loading="lazy"
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
-
+        src="https://www.google.com/maps?q=Strada%20Razelm%2019%2C%20Jurilovca%2C%20Tulcea&output=embed"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     &copy; 2025 Casa Ivana. Cu drag din Dobrogea.
   </footer>
 
-  <!-- Scroll inteligent navbar -->
+  <!-- SCRIPT NAVBAR SCROLL INTELIGENT -->
   <script>
     let lastScroll = 0;
     const nav = document.getElementById("mainNav");
-
     window.addEventListener("scroll", () => {
       const currentScroll = window.pageYOffset;
       if (currentScroll <= 0) {
         nav.style.transform = "translateY(0)";
         return;
       }
-
-      if (currentScroll > lastScroll) {
-        // scroll down
-        nav.style.transform = "translateY(-100%)";
-      } else {
-        // scroll up
-        nav.style.transform = "translateY(0)";
-      }
-
+      nav.style.transform = currentScroll > lastScroll ? "translateY(-100%)" : "translateY(0)";
       lastScroll = currentScroll;
     });
   </script>
 
-  <!-- AOS init -->
+  <!-- SCRIPT MENIU MOBIL -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+
+  <!-- AOS INIT -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -166,11 +169,6 @@
   </script>
 
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("show");
-  }
-</script>
 
 
 
