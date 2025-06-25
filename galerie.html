@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie – Casa Ivana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav id="mainNav">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Casa Ivana</a>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="facilitati.html">Facilități</a></li>
+        <li><a href="galerie.html" class="active">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="facilitati-header" data-aos="fade-in">
+    <img src="poze/fundal11.jpg" alt="Galerie Casa Ivana" class="header-bg" />
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Galerie foto</h1>
+      <p>Descoperă atmosfera de poveste de la Casa Ivana.</p>
+    </div>
+  </header>
+
+  <section class="galerie-grid" data-aos="fade-up">
+    <div class="container">
+      <h2>Imagini din locație</h2>
+      <div class="grid-poze">
+        <img src="poze/dormitor11.jpg" alt="Dormitor" />
+        <img src="poze/dormitor21.jpg" alt="Dormitor tradițional" />
+        <img src="poze/bucatarie4.jpg" alt="Bucătărie" />
+        <img src="poze/frontal.jpg" alt="Bucătărie" />
+        <img src="poze/bucatarie6.jpg" alt="Bucătărie" />
+        <img src="poze/curte1.jpg" alt="Curte" />
+
+        <img src="poze/mama1.jpg" alt="Primăvară la Casa Ivana" />
+        <img src="poze/gura-portitei.jpg" alt="Gura Portiței" />
+        <img src="poze/baie1.jpg" alt="Gura Portiței" />
+        <!-- Adaugă mai multe imagini după nevoie -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER FINANTARE -->
+  <section class="sigle-europene" data-aos="fade-up">
+    <div class="sigle-wrapper">
+      <img src="poze/baner.jpg" alt="Sigle AFIR, PNDR, Guvern" />
+    </div>
+  </section>
+
+
+  <footer>
+    &copy; 2025 Casa Ivana. Cu drag din Dobrogea.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+  </script>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
