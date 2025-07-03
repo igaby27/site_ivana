@@ -460,6 +460,9 @@ footer {
 .galerie-grid {
   padding: 50px 20px;
   text-align: center;
+   max-width: 95%;       /* în loc de 1200px */
+  margin: 0 auto;
+  padding: 10px 5%;
 }
 
 .grid-poze {
@@ -469,14 +472,18 @@ footer {
   margin-top: 30px;
 }
 
-.grid-poze img {
+.galerie-grid img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  transition: transform 0.3s;
+  height: 250px;       /* sau 300px, în funcție de preferință */
+  object-fit: cover;   /* taie marginile și păstrează centrul imaginii */
+  border-radius: 10px;
 }
+
 
 .grid-poze img:hover {
   transform: scale(1.05);
+}
+
+.galerie h2 {
+  margin-top: 80px; /* mărește spațiul față de secțiunea anterioară */
 }
